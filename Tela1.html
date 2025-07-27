@@ -10,29 +10,36 @@
 
 <body>
     <header id="navbar">
-        <img src="/img/logo.svg" alt="logo">
+        <div id="company">
+            <img src="/img/logo.svg" alt="logo">
+            <ul>
+                <li><h2>Emporio</h2></li>
+                <li><h4>da</h4></li>
+                <li><h2>Pizza</h2></li>
+            </ul>
+        </div>
 
         <nav>
             <ul>
-                <li><a href="Tela1.html" >Inicio</a></li>
-                <li><a href="Cardapio.html" >Pizzas</a></li>
-                <li><a href="Bebidas.html" >Bebidas</a></li>
-                <li><a href="tela.carrinho.html" >Carrinho</a></li>
-                <li><a href="endereco.html" >Endereço</a></li>
+                <li><a href="Tela1.html">Inicio</a></li>
+                <li><a href="Bebidas.html">Bebidas</a></li>
+                <li><a href="endereco.html">Endereço</a></li>
+                <li><a href="Cardapio.html">Pizzas</a></li>
             </ul>
         </nav>
+        <button id="cart-btn" onclick="window.location.href='tela.carrinho.html'"> <img src="./img/shopping-cart.png"> Pedir Agora</button>
+        <!-- <script type="text/javascript">
+            document.getElementById("cart-btn").onclick = function () {
+                location.href = "tela.carrinho.html";
+            }
+        </script> -->
     </header>
-
-    <h1>Pizzaria de testes</h1>
-    <h2>A melhor pizza da cidade voce encontra aqui!</h2>
-    <div container>
-        <img src="/img/pizza.jpg" alt="Logo da Pizzaria" />
-
-
-        <h3>Confira já os sabores</h3> <button onclick="window.location.href='Cardapio.html'">Cardápio</button>
-
-
-
+    <section id="home">
+        <div id="buttons">
+            <button id="menu-btn" onclick="window.location.href='Cardapio.html'">Ver Cardápio</button>
+            <button id="table-btn">Reservar Mesa</button>
+        </div>
+    </section>
 </body>
 
 </html>

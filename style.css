@@ -55,10 +55,12 @@ html {
     margin: 0;
     border: 0;
     padding: 0;
+    font-family: system-ui;
+    /* remover depois */
+    /* background-color: rgb(0, 0, 0); */
 }
 
 body {
-    font-family: Verdana, Tahoma, sans-serif;
     margin: 0;
     border: 0;
     padding: 0;
@@ -67,31 +69,107 @@ body {
     flex-direction: column;
 }
 
+button{
+    font-family: system-ui;
+}
+
 #navbar {
-    background: rgb(99, 99, 99);
+    background: rgb(255, 0, 0);
     width: 100%;
-    height: 7dvh;
+    height: 10dvh;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    position: fixed;
 }
 
 #navbar ul {
     list-style: none;
     display: flex;
     font-weight: bold;
-    font-size: large;
+    font-size:medium;
 }
+#navbar li {
+    padding-left: 0.8dvw;
+}
+
+
 #navbar nav {
     padding-right: 10px;
 }
+#company {
+    color: white;
+    height: 10dvh;
+    width: auto;
+    display: flex;
 
-#navbar img {
+}
+#company ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 5px 0 5px 0;
+    padding-left: 10px;
+}
+#company h2,h4 { 
+    margin: 1px;
+}
+#company img {
     height: 90%;
     padding-left: 10px;
 }
+
 #navbar a {
     color: white;
     text-decoration: none;
     margin: 0 1.5dvw 0 0;
+}
+
+#cart-btn {
+    display: flex;
+    color: red;
+    background-color: yellow;
+    border: 0;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 10dvh;
+    font-size: large;
+    padding: .8dvh 1dvw .8dvh 1dvw;
+    width: auto;
+}
+
+#cart-btn img {
+    height: 30px;
+    margin-right: 0.75dvw;
+}
+
+#home {
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.274)),url("./img/home-background.jpg");
+    background-size: cover;
+    background-position: center;
+} 
+#menu-btn, #table-btn {
+    width: auto;
+    font-size: large;
+    font-weight: 700;
+    padding: 0 1.5dvw 0 1.5dvw;
+    height: 7dvh;
+    border-radius: 10em;
+}
+
+#menu-btn {
+    
+}
+
+#table-btn{
+    color: white;
+    background:rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
 }
