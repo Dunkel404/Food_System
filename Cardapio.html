@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-   <header>
-    
+</head>
+
+<body>
+    <header id="navbar">
         <nav>
-            <a href="Cardapio.html" style="margin-right: 20px;">Pizzas</a>
-            <a href="Bebidas.html" style="margin-right: 20px;">Bebidas</a>
-            <a href="Tela1.html" style="margin-right: 20px;">Inicio</a>
-            <a href="tela.carrinho.html" style="margin-right: 20px;">Carrinho</a>
-            <a href="endereco.html" style="margin-right: 20px;">Endereço</a>  
+            <ul>
+                <li><a href="Cardapio.html" style="margin-right: 20px;">Pizzas</a></li>
+                <li><a href="Bebidas.html" style="margin-right: 20px;">Bebidas</a></li>
+                <li><a href="Tela1.html" style="margin-right: 20px;">Inicio</a></li>
+                <li><a href="tela.carrinho.html" style="margin-right: 20px;">Carrinho</a></li>
+                <li><a href="endereco.html" style="margin-right: 20px;">Endereço</a></li>
+            </ul>
         </nav>
-        
     </header>
 
 
 
     <title>Cardapio</title>
-<h1>Aqui estão todos os sabores disponiveis</h1>
-<h2>Calabresa com catupiry</h2> 
+    <h1>Aqui estão todos os sabores disponiveis</h1>
+    <h2>Calabresa com catupiry</h2>
     <img src="/img/calabresa.catu.jpeg" alt="10" />
     <button onclick="addToCart('Calabresa com catupiry')">Adicionar ao carrinho</button>
-    
+
     <h2>Strogonoff</h2>
     <img src="/img/item1.png" alt="10" />
     <button onclick="addToCart('Strogonoff')">Adicionar ao carrinho</button>
@@ -47,17 +51,17 @@
     <h2>Frango com cheddar</h2>
     <img src="/img/frango.jpeg" alt="10" />
     <button onclick="addToCart('Frango com cheddar')">Adicionar ao carrinho</button>
+    
 
     <script src="carrinho.js"></script>
-    <div id="cart">  
+    <div id="cart">
         <h3>Carrinho</h3>
         <ul id="cart-items"></ul>
         <a href="tela.carrinho.html">
             <button>Acessar Carrinho</button>
         </div>
+        
 
-</head>
-<body>
-    
 </body>
+
 </html>

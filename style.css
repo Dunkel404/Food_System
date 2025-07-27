@@ -1,46 +1,97 @@
- img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
+/* img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
 
 
-     body {
-            font-family: Arial, sans-serif;
-        }
-        #cart {
-            max-width: 400px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            padding: 15px;
-        }
-        #cart h2 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        button {
-            margin-left: 10px;
-        }
-        #finalize-btn {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #finalize-btn:hover {
-            background-color: #218838;
-        }
+
+
+#cart {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+#cart h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+button {
+    margin-left: 10px;
+}
+
+#finalize-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#finalize-btn:hover {
+    background-color: #218838;
+} */
+
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#navbar {
+    background: rgb(99, 99, 99);
+    width: 100%;
+    height: 7dvh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+    font-size: large;
+}
+#navbar nav {
+    padding-right: 10px;
+}
+
+#navbar img {
+    height: 90%;
+    padding-left: 10px;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5dvw 0 0;
+}
