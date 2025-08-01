@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Login system with Node.js, Express, and SQLserver",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "dependencies": {
     "dotenv": "^17.2.1",
     "next": "^15.4.5",
