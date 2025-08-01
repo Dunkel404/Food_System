@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colab's Pizzaria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header id="navbar">
+        <div id="company">
+            <img src="/img/logo.svg" alt="logo">
+            <ul>
+                <li><h3>Emporio</h3></li>
+                <li><h5>da</h5></li>
+                <li><h3>Pizza</h3></li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="Tela1.html">Inicio</a></li>
+                <li><a href="Bebidas.html">Bebidas</a></li>
+                <li><a href="endereco.html">Endereço</a></li>
+                <li><a href="Cardapio.html">Pizzas</a></li>
+            </ul>
+        </nav>
+        <button id="cart-btn" onclick="window.location.href='tela.carrinho.html'"> <img src="./img/shopping-cart.png"> Pedir Agora</button>
+        <!-- <script type="text/javascript">
+            document.getElementById("cart-btn").onclick = function () {
+                location.href = "tela.carrinho.html";
+            }
+        </script> -->
+    </header>
+    <section id="home">
+        <div id="texts">
+            <h1>As Melhores Pizzas da Cidade</h1>
+            <h3>Feitas com ingredientes frescos e amor</h3>
+        </div>
+        <div id="buttons">
+            <button id="menu-btn" onclick="window.location.href='Cardapio.html'">Ver Cardápio</button>
+            <button id="table-btn">Reservar Mesa</button>
+        </div>
+    </section>
+</body>
+
+</html>

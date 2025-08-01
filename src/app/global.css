@@ -135,3 +135,30 @@ button{
     font-size: xx-large;
     text-shadow: #000 5px 5px 7px;
 }
+
+#menu-item {
+    background-color: rgb(202, 202, 202);
+    width: 15em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+
+#menu-item #item-image {
+    background-color: black;
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+#menu-item #left {
+    display: flex;
+    flex-direction: column;
+}
+
+#left #status {
+    font-weight: 600;
+    color: red;
+}

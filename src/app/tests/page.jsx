@@ -1,13 +1,28 @@
 import Image from 'next/image';
-
+import '@/app/global.css'
 export default function page() {
     return (
         <html>
             <body>
                 <section id="menu-item">
-                    <h2> Nome do Item</h2>
-                    <Image src="/img/coca.jpg" width={256} height={256} quality={50} alt="coca" />
-                    <button onclick="addToCart('Coca Cola lata 250ml')">Adicionar ao carrinho</button>
+                    <div id="item-image">
+                        <Image src="/img/coca.webp" fill={true} quality={50} alt="coca" />
+                    </div>
+                    <div id="item-buy">
+                    <button onclick="addToCart('Coca Cola lata 250ml')"/>
+                    </div>
+                    <div id="item-price">
+                        <Image src="/img/coca.webp" fill={true} quality={50} alt="coca" />
+                    </div>
+                    <div id="item-name">
+                    <h2> Coca Cola </h2>
+                    </div>
+                    <div id="item-info">
+                        <Image src="/img/coca.webp" fill={true} quality={50} alt="coca" />
+                    </div>
+                                        <div id="item-status">
+                    <p id="status">Item não disponivel</p>
+                    </div>
                 </section>
             </body>
         </html>
