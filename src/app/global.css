@@ -144,94 +144,22 @@ h5 {
     text-shadow: #000 5px 5px 7px;
 }
 
-#menu-item {
-    background-color: #cacaca;
-    width: 15em;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    border-radius: 1em;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-}
-
-#menu-item #item-image {
-    background-color: black;
-    position: relative;
-    height: 13em;
+#menu {
+    height: 150dvh;
     width: 100%;
-    margin-bottom: 2em;
-    border-radius: 0.5em;
-    /* filter: contrast(0.25); */
-}
-
-#menu-item #buy-button {
-    transition: 0.2s;
-    height: 3em;
-    width: 3em;
-    position: absolute;
-    top: 12.5em;
-    border-radius: 5em;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    background-color: rgb(236, 151, 95);
-    box-shadow: 0px 0px 0px 3px #cacaca;
-    cursor: pointer;
-    /* box-shadow: 0px 0px 0px 3px #cea1a1; */
+    background-color: white;
 }
-
-#menu-item #buy-button:hover {
-    transition: 0.2s;
-    height: 3.3em;
-    width: 3.3em;
-    top: 12.35em;
-}
-
-@keyframes h1hover {
-    0% {
-        transform: rotate(0);
-    }
-
-    33% {
-        transform: rotate(15deg);
-    }
-
-    66% {
-        transform: rotate(-15deg);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
-}
-
-#menu-item #buy-button:hover h1 {
-    animation-name: h1hover;
-    animation-duration: 0.5s;
-}
-
-#buy-button h1 {
-    transition: 0.5s;
-    position: relative;
-    bottom: 0.1rem;
-    font-family: sans-serif;
-    /* margin:0; */
-
-}
-
-#menu-item span,
-#menu-item h2,
-#menu-item p {
-    margin: 0;
-}
-
-#menu-item #status {
-    display: none;
-    /* color:red;
-    font-weight: 650; */
+#menu #item-grid {
+    height: 100%;
+    justify-content: center;
+    align-items:flex-start;
+    width: auto;
+    display: grid;
+    gap: 1dvw;
+    padding: 1px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
 }

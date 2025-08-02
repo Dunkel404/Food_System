@@ -1,68 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+"use client";
+import Image from 'next/image';
+import '@/components/shared/menu-item.css'
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebidas</title>
-    <link rel="stylesheet" href="style.css">
+export default function MenuItem({name, description, price, image, estoque}) {
+    return (
+        <section id="menu-item">
+            <div id="item-image">
+                <Image 
+                 src={image}
+                 width={0}
+                 height={0}
+                 sizes='100vw'
+                 style={{width: 'auto', height: '95%', padding: '2.5%'}}
+                 alt={`imagem de ${name}`}
+                />
+            </div>
+            <div id="buy-button" onClick={ () => addToCart(`${name}, ${description}`)}> <h1>+</h1></div>
+            <div id="item-price">
+                <span> R${price.toFixed(2).replace('.',',')}</span>
+            </div>
+            <div id="item-name">
+                <h2> {name} </h2>
+            </div>
+            <div id="item-info">
+                <p> {description} </p>
+            </div>
+            <div id="item-status">
 
-
-
-
-
-</head>
-
-<body>
-    <header id="navbar">
-        <nav>
-            <ul>
-                <li><a href="Cardapio.html" >Pizzas</a></li>
-                <li><a href="Bebidas.html" >Bebidas</a></li>
-                <li><a href="Tela1.html" >Inicio</a></li>
-                <li><a href="tela.carrinho.html" >Carrinho</a></li>
-                <li><a href="endereco.html" >Endereço</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Aqui estão todas as opções de bebidas</h1>
-
-    <section id="menu-item">
-        <h2> Nome do Item</h2>
-        <Image rc="img/coca.jpg" alt="coca"/>
-        <button onclick="addToCart('Coca Cola lata 250ml')">Adicionar ao carrinho</button>
-    </section>
-
-    <h2> Coca Cola lata 250ml</h2>
-    <img src="img/coca.jpg" alt="coca" />
-    <button onclick="addToCart('Coca Cola lata 250ml')">Adicionar ao carrinho</button>
-    <br>
-    <h2>Pepsi lata 250 ml</h2>
-    <img src="/img/pepsi.jpg" alt="pepsi" />
-    <button onclick="addToCart('Pepsi lata 250 ml')">Adicionar ao carrinho</button>
-    <br>
-    <h2>heineken Longneck</h2>
-    <img src="/img/heinicken.jpg" alt="heineken">
-    <button onclick="addToCart('Heineken Longneck')">Adicionar ao carrinho</button>
-    <br>
-    <h2>H20 500ml</h2>
-    <img src="/img/h2o.jpg" alt="h2o">
-    <button onclick="addToCart('H20 500ml')">Adicionar ao carrinho</button>
-    <br>
-
-    <script src="carrinho.js"></script>
-
-    <div id="cart">
-        <h3>Carrinho</h3>
-        <ul id="cart-items"></ul>
-        <a href="tela.carrinho.html">
-            <button>Acessar Carrinho</button>
-    </div>
-
-
-
-
-
-</body>
-
-</html>
+                <p id="status">Item não disponivel</p>
+            </div>
+        </section>
+    )
+}
