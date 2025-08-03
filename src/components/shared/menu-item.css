@@ -1,6 +1,5 @@
-
 #menu-item {
-    background-color: #cacaca;
+    background-color: #d3d3d3;
     width: 15em;
     height: auto;
     display: flex;
@@ -12,8 +11,21 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.616);
 }
 
-#menu-item #item-image {
-    background-color: black;
+#menu-item #refrigerante-image {
+    background-color: rgba(0, 0, 0, 0.233);
+    box-shadow: inset 0 0 20px 2px rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 13em;
+    width: 100%;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+    /* filter: contrast(0.25); */
+}
+
+#menu-item #pizza-image {
+    background-color: rgba(0, 0, 0, 0);
     position: relative;
     display: flex;
     justify-content: center;
@@ -99,3 +111,49 @@
     /* color:red;
     font-weight: 650; */
 }
+
+#item-price {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+#current-price {}
+
+h2 {
+    font-weight: 600;
+}
+
+#old-price {
+    position: absolute;
+    top: 19.8em;
+    left: 70%;
+    text-decoration: line-through solid 1px;
+    color: rgb(61, 61, 61);
+    font-size: 80%;
+
+}
+
+#promo-div {
+    background-color: #d4bea6;
+    border-radius: 10em;
+    position: absolute;
+    padding: 0.2em;
+    right: -1em;
+    top: -1em;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.616);
+
+}
+
+#newitem-div {
+    background-color: #a6c3d400;  
+    height: 2em;
+    width: auto;
+    border-radius: 10em;
+    position: absolute;
+    padding: 0.2em 0.5em;
+    left: 15em - 4em;
+    z-index: 1;
+    top: -1em;
+}
+

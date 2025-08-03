@@ -1,13 +1,7 @@
 import Link from 'next/link';
-import { getMenuItems } from '@/lib/data';
-import MenuItem from '@/components/shared/menuitem'
 
-//XXXXXXXX REMOVER ASYNC DEPOIS QUE TIRAR O MENU DE ITENSSSS
-export default async function HomePage() {
-    const allItems = await getMenuItems();
+export default function HomePage() {
 
-    const refrigerantes = allItems.filter(item => item.type === 'refrigerantes');
-//XXXXXXXXXX MODIFICAR O FUNDO DA IMAGEM BASEADO NO TYPE
     return (
         <section id="home">
             <div id="texts">
@@ -23,14 +17,6 @@ export default async function HomePage() {
                     <button id="table-btn">Reservar Mesa</button>
                 </Link>
             </div>
-
-            <section id="menu">
-                <div id='item-grid'>
-                    {refrigerantes.map((item) => (
-                        <MenuItem key={item.id} name={item.name} description={item.description} price={item.price} image={item.image} estoque={item.estoque}/>
-                    ))}
-                </div>
-            </section>
         </section>
 
 

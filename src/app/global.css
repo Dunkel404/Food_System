@@ -27,6 +27,7 @@ button {
     height: 6em;
     display: flex;
     align-items: center;
+    z-index: 5;
     justify-content: space-evenly;
     position: fixed;
 }
@@ -148,6 +149,7 @@ h5 {
     height: 150dvh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -158,8 +160,19 @@ h5 {
     align-items:flex-start;
     width: auto;
     display: grid;
-    gap: 1dvw;
-    padding: 1px;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2dvw;
+    padding: 3px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
+}
+
+#menu-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-top p {
+    margin: 0;
 }
