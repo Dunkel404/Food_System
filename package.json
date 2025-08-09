@@ -1,24 +1,23 @@
 {
-  "name": "login-system",
+  "name": "food-system-login",
   "version": "1.0.0",
-  "description": "Login system with Node.js, Express, and SQLserver",
+  "description": "Sistema de login para Food System",
   "main": "server.js",
-  "dependencies": {
-    "dotenv": "^17.2.1",
-    "next": "^15.4.5",
-    "reac": "^0.0.0",
-    "react-dom": "^19.1.1"
-  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "build": "npm install && npm run migrate",
+    "migrate": "node migrate.js"
+  },
+  "dependencies": {
     "express": "^4.18.2",
-    "mssql": "^11.0.1"
+    "pg": "^8.11.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
-} 
+}
