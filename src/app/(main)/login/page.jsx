@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation';
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
@@ -26,17 +26,14 @@ export default function LoginPage() {
 
       const data = await response.json();
 
-      if (data.success) {
-        // Salvar token no localStorage
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        
-        // Redirecionar para a página principal
-        router.push('/');
-      } else {
-        setError(data.message || 'Erro ao fazer login');
-      }
-    } catch (err) {
+    if (data.success) {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      router.push('/adm');
+    } else {
+      setError(data.message || 'Erro ao fazer login');
+    }
+    } catch (error) {
       setError('Erro de conexão. Tente novamente.');
     } finally {
       setLoading(false);
@@ -44,7 +41,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -55,7 +52,7 @@ export default function LoginPage() {
           </p>
         </div>
         
-        <form className="mt-8 space-y-6" onSubmit={handleLogin}>
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               {error}
@@ -64,9 +61,7 @@ export default function LoginPage() {
           
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label htmlFor="email" className="sr-only">
-                Email
-              </label>
+              <label htmlFor="email" className="sr-only">Email</label>
               <input
                 id="email"
                 name="email"
@@ -79,9 +74,7 @@ export default function LoginPage() {
               />
             </div>
             <div>
-              <label htmlFor="password" className="sr-only">
-                Senha
-              </label>
+              <label htmlFor="password" className="sr-only">Senha</label>
               <input
                 id="password"
                 name="password"
@@ -107,10 +100,8 @@ export default function LoginPage() {
           
           <div className="text-center">
             <p className="text-sm text-gray-600">
-              Não tem uma conta?{' '}
-              <span className="font-medium text-red-600">
-                Contate o administrador
-              </span>
+              Não tem uma conta? 
+              <span className="font-medium text-red-600">Contate o administrador</span>
             </p>
           </div>
         </form>
