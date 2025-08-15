@@ -20,7 +20,8 @@ export default function NavBar(){
                 <li><a href="Cardapio.html">Pizzas</a></li>
             </ul>
         </nav>
-        <button id="cart-btn" onClick="window.location.href='tela.carrinho.html'"> <img src="./img/shopping-cart.png"/> Pedir Agora</button>
+        {/* <button id="cart-btn" onClick="window.location.href='tela.carrinho.html'"> <img src="./img/shopping-cart.png"/> Pedir Agora</button> */}
+        <button id="cart-btn"> <img src="./img/shopping-cart.png"/> Pedir Agora</button>
     </header>
     )
 }

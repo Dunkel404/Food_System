@@ -1,0 +1,16 @@
+@keyframes bk_grad_movement {
+    0% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(102, 43, 0, 1) 100%);
+    }
+
+    100% {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(102, 43, 0, 1) 100%);
+    }
+}
+
+body {
+    color: white;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(102, 43, 0, 1) 100%);
+    animation: 0 ease-in-out 25s infinite alternate;
+}
